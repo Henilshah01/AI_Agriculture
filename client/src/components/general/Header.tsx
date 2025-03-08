@@ -6,6 +6,7 @@ import { Loader2 } from "lucide-react";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/dashboard", label: "Dashboard" },
+  { to: "/agriconnect", label: "AgriConnect" },
   { to: "/aboutus", label: "About Us" },
 ];
 

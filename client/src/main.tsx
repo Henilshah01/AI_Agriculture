@@ -9,11 +9,8 @@ import SignUpPage from './pages/SignUpPage'
 import AuthLayout from './layouts/AuthLayout'
 import AppLayout from './layouts/AppLayout'
 import DashboardPage from './pages/DashboardPage'
+import AgriConnect from './layouts/RootLayout'
 import RootLayout from './layouts/RootLayout'
-import InterviewPage from './pages/InterviewPage'
-import InterviewLayout from './layouts/InterviewLayout'
-import InterviewForm from './components/interview/InterviewForm'
-import AnalyticsPage from './pages/AnalyticsPage'
 import AboutPage from './pages/Aboutpage'
 
 // Import your Publishable Key
@@ -46,7 +43,20 @@ const router = createBrowserRouter([
           },
           {
             path: "user/form",
-            element: <InterviewForm />,
+          },
+        ]
+      },
+      {
+        path: "agriconnect",
+        element: <AppLayout />,
+        children: [
+          {
+            path: "",
+            element: <AgriConnect />,
+          },
+          {
+            path: "form",
+          
           },
         ]
       },
@@ -60,28 +70,11 @@ const router = createBrowserRouter([
           },
           {
             path: "form",
-            element: <InterviewForm />,
+          
           },
         ]
       },
-      {
-        path: "interview",
-        element: <InterviewLayout />,
-        children: [
-          {
-            path: ":id",
-            element: <InterviewPage />,
-          },
-          {
-            path: ":id/feedback",
-            element: <AnalyticsPage />,
-          },
-          {
-            path: "sessions/:id",
-            element: <AnalyticsPage />,
-          },
-        ]
-      },
+
       // auth routes
       {
         path: "auth",
