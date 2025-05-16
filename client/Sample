@@ -4,3 +4,4 @@ SEO: Improve on-page (keywords, meta tags) and off-page (backlinks) SEO.
 Collaborations: Partner with influencers or brands for campaigns.
 Segmented Email Lists: Segment your audience based on interests, behaviour, or location. This allows you to send personalized and relevant content
 
+pnpm dlx shadcn@latest init
